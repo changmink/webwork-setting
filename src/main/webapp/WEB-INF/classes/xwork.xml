@@ -1,0 +1,13 @@
+<!DOCTYPE xwork PUBLIC "-//OpenSymphony Group//XWork 1.0//EN" "http://www.opensymphony.com/xwork/xwork-1.0.dtd">
+<xwork>
+    <!-- Include webwork defaults (from WebWork JAR). -->
+    <include file="webwork-default.xml"/>
+
+    <package name="default" extends="webwork-default">
+        <default-interceptor-ref name="basicStack"/>
+
+        <action name="helloWorld" class="HelloAction">
+            <result name="success">/WEB-INF/jsp/hello.jsp</result>
+        </action>
+    </package>
+</xwork>

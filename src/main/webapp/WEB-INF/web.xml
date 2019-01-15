@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <filter>
+        <filter-name>webwork</filter-name>
+        <filter-class>
+            com.opensymphony.webwork.dispatcher.FilterDispatcher
+        </filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>webwork</filter-name>
+        <url-pattern>*.action</url-pattern>
+    </filter-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>webwork</taglib-uri>
+            <taglib-location>/WEB-INF/lib/webwork-2.2.6.jar</taglib-location>
+        </taglib>
+    </jsp-config>
+</web-app>
